@@ -1,0 +1,17 @@
+<div class="container " *ngIf="product" > 
+    <h1>Title : {{product.title}}</h1>
+    
+    
+    <div>
+        <p>Descriptions : {{product.description}}</p>
+    </div>
+
+
+    
+    <div class="detail" *ngIf="product.price">
+        <p>Price : {{product.price | currency}}  ({{product.rating}})</p>
+    </div>
+
+   
+    <button class="btn btn-primary" >View Product</button>
+</div>

@@ -3,4 +3,6 @@ export interface Course{
     name:string;
     author:string;
     title:string;
+    level:string;
+    purchase:string;
 }

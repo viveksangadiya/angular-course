@@ -1,18 +1,25 @@
-<div class="container" *ngIf="course"> 
-   <h1>{{course.name}}</h1>
+<div class="container " *ngIf="course" [ngClass]="cardClasses()"> 
+    <h1>Title : {{course.name}}</h1>
     <div class="title">
-        <h1>{{course.title}}</h1>
-       
+        <h1>Course title : {{course.title}}</h1> 
     </div>
     
     <div>
-        <h2>{{course.author}}</h2>
+        <h2>Author : {{course.author}}</h2>
     </div>
 
     <img src="https://media.istockphoto.com/id/1267019828/photo/blank-billboard-outdoor-easy-png.jpg?s=612x612&w=is&k=20&c=7fqcblgW3uXxTai5YFNdvJtL8S54miZi3-11nxptkPU=" style="width: 200px; height: 200px;">
 
-    <div class="detail">
-         <p>Purchase : $50</p>      
+    
+    <div class="detail" *ngIf="course.purchase">
+        <p>Purchase : {{course.purchase | currency}}</p>
     </div>
+
+    <div class="course-level" [ngSwitch]="course.level">
+        <div class="level" *ngSwitchCase="'beginner'">Beginner </div>
+        <div class="level" *ngSwitchCase="'intermideate'">intermideate </div>
+        <div class="level" *ngSwitchCase="'advance'">Advance </div>
+    </div>
+   
     <button class="btn btn-primary" (click)="SendData()">View course</button>
 </div>
