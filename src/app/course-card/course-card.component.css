@@ -1,0 +1,14 @@
+.container{
+    border: 1px solid black;
+    margin-top: 8px;
+    width: 450px;
+    height: auto;
+    padding-bottom: 15px;
+    justify-content: center;
+    padding-left: 190px;
+   
+}
+.btn-primary{
+    color: blue;
+}
+
